@@ -1,4 +1,4 @@
-# spotify_songs_sql_project
+# netflix_movies_dataset
 
 Netflix Dataset SQL Analysis
 Project Overview
