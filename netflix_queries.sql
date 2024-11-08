@@ -45,3 +45,88 @@ FROM movies
 WHERE releaseYear >= 2020
 GROUP BY genres
 ORDER BY avg_rating DESC;
+
+-- movies that are available in the highest number of countries 
+
+SELECT 
+    title,
+    type,
+    releaseYear,
+    imdbAverageRating,
+    imdbNumVotes,
+    availableCountries,
+    LENGTH(availableCountries) - LENGTH(REPLACE(availableCountries, ',', '')) + 1 AS numCountries
+FROM 
+    your_table_name
+ORDER BY 
+    numCountries DESC
+LIMIT 10;
+
+
+-- Movies with high rating and Low Votes
+
+SELECT title, releaseyear, imdbaveragerating, imdbnumvotes 
+FROM movies
+WHERE  imdbaveragerating > 8 AND imdbnumvotes < 50000;
+
+-- Average IMDb Rating of All Movies: What is the average IMDb rating of all movies
+
+SELECT 
+AVG(imdbAverageRating) as Average_rating
+FROM movies;
+
+-- Total Number of Movies Released Each Year
+
+SELECT 
+    releaseYear, 
+    COUNT(*) AS movie_count
+FROM 
+    your_table_name
+GROUP BY 
+    releaseYear
+ORDER BY 
+    releaseYear ASC;
+
+
+-- Movies with IMDb Rating Above 8
+
+SELECT 
+    title, 
+    releaseYear, 
+    imdbAverageRating
+FROM 
+    movies
+WHERE 
+    imdbAverageRating > 8
+ORDER BY 
+    imdbAverageRating DESC;
+
+-- Movie by Votes
+
+SELECT title
+FROM movies
+ORDER BY imdbnumvotes DESC
+LIMIT 1;
+
+-- Top 10 Highest-Rated Movies
+
+SELECT 
+    title, 
+    imdbAverageRating, 
+    releaseYear
+FROM 
+    movies
+ORDER BY 
+    imdbAverageRating DESC
+LIMIT 10;
+
+-- Movies Available in a Specific Country
+
+SELECT 
+    title, 
+    releaseYear, 
+    imdbAverageRating
+FROM 
+    your_table_name
+WHERE 
+    FIND_IN_SET('US', availableCountries) > 0;
