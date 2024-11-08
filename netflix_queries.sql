@@ -81,7 +81,7 @@ SELECT
     releaseYear, 
     COUNT(*) AS movie_count
 FROM 
-    your_table_name
+    movies
 GROUP BY 
     releaseYear
 ORDER BY 
@@ -127,6 +127,6 @@ SELECT
     releaseYear, 
     imdbAverageRating
 FROM 
-    your_table_name
+    movies
 WHERE 
     FIND_IN_SET('US', availableCountries) > 0;
