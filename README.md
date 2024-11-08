@@ -11,8 +11,6 @@ This project analyzes Netflix data using SQL to explore trends, user behaviors, 
 
 This dataset is released under the Creative Commons CC0 1.0 license, which allows for unrestricted use, distribution, and reproduction in any medium, without the need for permission or attribution. Under CC0, the dataset is dedicated to the public domain, making it free to use for any purpose.
 
-- Source: Octopus Team on Kaggle
-
 ### Dataset Details
 This dataset includes various details such as:
 - Show titles, genres, and release years
