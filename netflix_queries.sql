@@ -58,7 +58,6 @@ ORDER BY
     numCountries DESC
 LIMIT 10;
 
-
 -- Movies with high rating and Low Votes
 
 SELECT title, releaseyear, imdbaveragerating, imdbnumvotes 
@@ -83,7 +82,6 @@ GROUP BY
 ORDER BY 
     releaseYear ASC;
 
-
 -- Movies with IMDb Rating Above 8
 
 SELECT 
@@ -104,14 +102,11 @@ FROM movies
 ORDER BY imdbnumvotes DESC
 LIMIT 1;
 
-
 -- Movies Available in a Specific Country
 
 SELECT 
-    title, 
-    releaseYear, 
-    imdbAverageRating
+title, releaseYear, imdbAverageRating
 FROM 
-    movies
+movies
 WHERE 
     FIND_IN_SET('US', availableCountries) > 0;
