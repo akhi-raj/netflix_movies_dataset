@@ -109,5 +109,5 @@ title, releaseYear, imdbAverageRating
 FROM 
 movies
 WHERE 
-    FIND_IN_SET('US', availableCountries) > 0;
+    country LIKE '%US%';
 -- Result: List of movies available in the United States (US).
