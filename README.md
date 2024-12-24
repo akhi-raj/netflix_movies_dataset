@@ -9,6 +9,9 @@ This project analyzes Netflix data using SQL to explore trends, user behaviors, 
 - Dataset: Full Netflix Dataset
 - License: Public Domain (CC0 1.0)
 
+- `SQL`
+
+
 This dataset is released under the Creative Commons CC0 1.0 license, which allows for unrestricted use, distribution, and reproduction in any medium, without the need for permission or attribution. Under CC0, the dataset is dedicated to the public domain, making it free to use for any purpose.
 
 ### Dataset Details
